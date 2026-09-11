@@ -15,3 +15,13 @@ a { color: #1a1a1a; text-decoration: underline; text-underline-offset: 3px; }
 nav { margin-top: 48px; padding-top: 16px; border-top: 1px solid #e5e5e5; font-size: 15px; color: #6b6b6b; }
 nav a { margin-right: 16px; }
 ul { padding-left: 22px; }
+details { border-bottom: 1px solid #e5e5e5; }
+h2 + details { margin-top: 16px; border-top: 1px solid #e5e5e5; }
+summary { display: block; position: relative; padding: 14px 36px 14px 0; font-weight: 500; color: #1a1a1a; cursor: pointer; list-style: none; }
+summary::-webkit-details-marker { display: none; }
+summary::before, summary::after { content: ""; position: absolute; top: calc(14px + 0.8em); right: 4px; width: 13px; height: 1.5px; margin-top: -0.75px; background: #6b6b6b; transition: transform 0.2s ease; }
+summary::after { transform: rotate(90deg); }
+details[open] > summary::after { transform: rotate(0deg); }
+summary + * { margin-top: 0; }
+details > :last-child { margin-bottom: 20px; }
+@media (prefers-reduced-motion: reduce) { summary::after { transition: none; } }

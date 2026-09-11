@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "legal-site",
+      "runtimeExecutable": "/bin/sh",
+      "runtimeArgs": ["-c", "cd /private/tmp/claude-501/-Users-daria-leonova-Documents-Pet-photolearner-legal--claude-worktrees-support-page-html-7f7cfc/cd68d869-b8e9-4d8c-94d4-3ba9fd8c5e95/scratchpad/site && exec python3 -m http.server 8741"],
+      "port": 8741
+    }
+  ]
+}
